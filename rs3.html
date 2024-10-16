@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .header,
+    .aside,
+    .content,
+    .sidebar,
+    .advetise,
+    .footer {
+        background-color: bisque;
+        border: 2px solid tomato;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .aside {
+        grid-area: aside;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .advetise {
+        grid-area: advetise;
+    }
+
+    .adds {
+        grid-area: adds;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .conteinar {
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+            "header  header    header    header"
+            "aside   content   content   sidebar"
+            "aside   content   content   advetise"
+            "footer  footer    footer    footer";
+    }
+
+    /* mobile responsive */
+    @media screen and (max-width:577px) {
+        .conteinar {
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+                "header "
+                "aside "
+                "content"
+                "sidebar"
+                "advetise"
+                "footer";
+        }
+    }
+
+    /* tablate reponsive */
+    @media screen and (min-width:577px) and (max-width:992px) {
+        .conteinar {
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+                "header header header "
+                "aside  aside aside "
+                "sidebar content content"
+                "sidebar content content"
+                "advetise footer footer";
+
+        }
+
+    }
+</style>
+
+<body class="conteinar">
+
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+
+    <div class="aside">
+        <ul>
+            <li><a href=""> Aside 1</a></li>
+            <li><a href=""> Aside 2</a></li>
+            <li><a href=""> Aside 3</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor impedit voluptatum a ipsum, sapiente
+        ratione minima laboriosam dolores nam reiciendis fugiat nostrum recusandae ut dicta, quia doloribus
+        soluta facilis debitis alias delectus? Itaque repudiandae excepturi commodi aspernatur sequi blanditiis
+        et corporis non, ipsum alias earum at ex laudantium nihil? Magni.
+    </div>
+   
+        <div class="sidebar">
+            <h4>Advetise</h4>
+        </div>
+        <div class="advetise">
+            <h4>Advetise</h4>
+        </div>
+    
+
+
+
+    <div class="footer">
+        Footer
+    </div>
+
+</body>
+
+</html>
